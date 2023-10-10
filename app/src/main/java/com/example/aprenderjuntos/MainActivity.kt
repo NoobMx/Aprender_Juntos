@@ -13,13 +13,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.aprenderjuntos.ui.theme.AprenderJuntosTheme
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.painter.Painter
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -48,7 +44,7 @@ fun ComposeArticulosApp(){
         titulo = stringResource(R.string.titulo_text),
         parrafo1 = stringResource(R.string.parrafo1_text),
         parrafo2 = stringResource(R.string.parrafo2_text),
-        Imagen = painterResource(R.drawable.bg_compose_background))
+        imagen = painterResource(R.drawable.bg_compose_background))
 }
 
 @Composable
@@ -56,12 +52,12 @@ fun TextoVista (
     titulo:String,
     parrafo1:String,
     parrafo2:String,
-    Imagen : Painter,
+    imagen : Painter,
     modifier: Modifier = Modifier
 ) {
     Column (modifier = modifier) {
         Image(
-            painter = Imagen,
+            painter = imagen,
             contentDescription = "Imagen con diversos diseños"
         )
         
